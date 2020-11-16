@@ -240,10 +240,10 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
     --disturl=https://npm.taobao.org/dist \
     --userconfig=$HOME/.cnpmrc"
     #替换rm指令移动文件到~/.trash/中
-    Trash()
-    {
-        mv $@ ~/.local/share/Trash/files/
-    }
+Trash()
+{
+    mv $@ ~/.local/share/Trash/files/
+}
 
 tim()
 {
