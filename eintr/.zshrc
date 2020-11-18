@@ -214,7 +214,8 @@ alias sshr='autossh -M 55555  -NfR 0.0.0.0:23333:localhost:22 yixingwei@175.24.2
 alias chtop='lssh htoper@175.24.24.112'
 alias centos='lssh yixingwei@175.24.24.112'
 alias vcentos='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@175.24.24.112:$HOME ~/Share/Centos -p 22 -C'
-alias varch='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.20:/home/eintr ~/Share/arch -p 22 -C'
+alias varchfast='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.20:/home/eintr ~/Share/arch -p 22 -C'
+alias varchnormal='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.31.235:/home/eintr ~/Share/arch -p 22 -C'
 alias vtermux='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 u0_a231@192.168.31.169:/data/data/com.termux/files/home ~/Share/Termux -p 8022 -C'
 alias vkali='sshfs -p 4022 yixingwei@localhost:$HOME ~/Share/Kali;lssh -p 4022 yixingwei@127.0.0.1'
 alias vfedora='sshfs -p 5022 yixingwei@localhost:$HOME ~/Share/Fedora;lssh  -p 5022 yixingwei@127.0.0.1'
@@ -234,6 +235,7 @@ alias mat='matlab -nodesktop -nosplash'
 alias rmt='Trash'
 alias vi='vim'
 alias ntfs='sudo ntfsfix /dev/sdc'
+alias typora='Typora'
 #alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
     --cache=$HOME/.npm/.cache/cnpm \
@@ -257,7 +259,7 @@ dict()
 }
 export GOPATH=$HOME/Projects/GOPATH  #默认安装包的路径
 export GOBIN=$HOME/Projects/GOPATH/bin
-export PATH=$PATH::/home/eintr/Share/XMind/XMind_amd64:$GOPATH/bin:/home/eintr/Share/openrefine-3.4.1:/home/eintr/.local/bin
+export PATH=$PATH::/home/eintr/Share/XMind/XMind_amd64:$GOPATH/bin:/home/eintr/Share/openrefine-3.4.1:/home/eintr/.local/bin:/home/eintr/Share/typora/
 
 export HADOOP_HOME=/usr/lib/hadoop
 export HADOOP_INSTALL=$HADOOP_HOME
