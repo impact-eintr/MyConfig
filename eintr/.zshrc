@@ -214,7 +214,7 @@ alias sshr='autossh -M 55555  -NfR 0.0.0.0:23333:localhost:22 yixingwei@175.24.2
 alias chtop='lssh htoper@175.24.24.112'
 alias centos='lssh yixingwei@175.24.24.112'
 alias vcentos='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@175.24.24.112:$HOME ~/Share/Centos -p 22 -C'
-alias varchfast='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.20:/home/eintr ~/Share/arch -p 22 -C'
+alias varchfast='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.6:/home/eintr ~/Share/arch -p 22 -C'
 alias varchnormal='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.31.235:/home/eintr ~/Share/arch -p 22 -C'
 alias vtermux='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 u0_a231@192.168.31.169:/data/data/com.termux/files/home ~/Share/Termux -p 8022 -C'
 alias vkali='sshfs -p 4022 yixingwei@localhost:$HOME ~/Share/Kali;lssh -p 4022 yixingwei@127.0.0.1'
