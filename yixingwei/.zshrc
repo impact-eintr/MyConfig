@@ -209,29 +209,29 @@ alias sl='ls'
 alias volup='amixer -D pulse set Master 5%+'
 alias voldown='amixer -D pulse set Master 5%-'
 alias grep='grep --color=auto'
-alias lssh='ssh -o ServerAliveInterval=60'
+alias lssh='proxychains4 ssh -o ServerAliveInterval=60'
 alias rssh='lssh -fNTCR localhost:5000:localhost:22 175.24.24.112'
 alias termux='lssh -p 8022 u0_a231@192.168.31.169'
 alias sshr='autossh -M 55555  -NfR 0.0.0.0:23333:localhost:22 yixingwei@175.24.24.112'
 alias chtop='lssh htoper@175.24.24.112'
+alias iserver='lssh root@81.68.137.167 -p 6222'
 alias centos='lssh yixingwei@175.24.24.112'
+alias ubuntu='lssh yixingwei@121.196.144.74'
 alias vcentos='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@175.24.24.112:$HOME ~/Share/Centos -p 22 -C'
+alias viserver='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 root@81.68.137.167:/ ~/Share/Iserver -p 6222 -C'
 alias varch='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.18:/home/eintr ~/Share/Arch -p 22 -C'
-alias vtermux='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 u0_a231@192.168.31.169:/data/data/com.termux/files/home ~/Share/Termux -p 8022 -C'
-alias vkali='sshfs -p 4022 yixingwei@localhost:$HOME ~/Share/Kali;lssh -p 4022 yixingwei@127.0.0.1'
-alias vfedora='sshfs -p 5022 yixingwei@localhost:$HOME ~/Share/Fedora;lssh  -p 5022 yixingwei@127.0.0.1'
-alias vubuntu='sshfs -p 6022 yixingwei@localhost:$HOME ~/Share/Fedora;lssh  -p 6022 yixingwei@127.0.0.1'
-
+alias vubuntu='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@121.196.144.74:$HOME ~/Share/Ubuntu -p 22 -C'
+alias reboot='sudo reboot'
+alias gbkunzip='unzip -O cp936'
 alias cvim='vim scp://yixingwei@175.24.24.112//home/yixingwei/'
 alias cmongo='mongo 175.24.24.112:27017/admin -uyixingwei -p'
 alias cmysql='mysql -h 175.24.24.112 -uroot -p'
+alias hmysql='mysql -h 175.24.24.112 -uhive -p'
 alias watchnvidia='watch -n 1 nvidia-smi'
 alias mongodb='mongod --dbpath ~/Share/mongodb/data'
 alias xmind='cd /home/yixingwei/Share/XMind/XMind_amd64 ;nohup XMind 2> /dev/null&;cd -'
-alias matlab='/run/media/yixingwei/新加卷/MATLAB/R2017a/bin/matlab'
 alias tf2='source activate tf2-gpu'
 #out : source deactivate
-alias mat='matlab -nodesktop -nosplash'
 alias rmt='Trash'
 alias vi='vim'
 alias ntfs='sudo ntfsfix /dev/sdc'
@@ -249,8 +249,9 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 tim()
 {
     /usr/lib/gsd-xsettings &;
+    /usr/lib/cinnamon-settings-daemon/csd-xsettings
     sleep 3;
-    /opt/deepinwine/apps/Deepin-TIM/run.sh
+    /opt/apps/com.qq.tim.spark/files/run.sh
 }
 dict()
 {
@@ -271,3 +272,7 @@ export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
+
+export RABBITMQ_SERVER=amqp://test:test@192.168.4.1:5672
+export PATH=~/.npm-global/bin:$PATH
+

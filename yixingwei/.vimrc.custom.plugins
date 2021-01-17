@@ -26,3 +26,14 @@ Plug 'pangloss/vim-javascript'
 Plug 'fatih/vim-go'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdcommenter'
+Plug 'mattn/emmet-vim'
+" 有道词典在线翻译
+Plug 'ianva/vim-youdao-translater'
+" 可以在文档中显示 git 信息
+Plug 'airblade/vim-gitgutter'
+" 下面两个插件要配合使用，可以自动生成代码块
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+Plug 'posva/vim-vue'
+Plug 'scrooloose/syntastic'
