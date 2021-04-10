@@ -19,21 +19,34 @@
 
 
 Plug 'Chiel92/vim-autoformat'
-Plug 'JuliaEditorSupport/julia-vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
+
+" go
 Plug 'fatih/vim-go'
+
+" tagbar
+Plug 'preservim/tagbar'
+Plug 'lvht/tagbar-markdown'
+
+
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdcommenter'
 Plug 'mattn/emmet-vim'
-" 有道词典在线翻译
-Plug 'ianva/vim-youdao-translater'
+
 " 可以在文档中显示 git 信息
 Plug 'airblade/vim-gitgutter'
+
 " 下面两个插件要配合使用，可以自动生成代码块
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'posva/vim-vue'
 Plug 'scrooloose/syntastic'
+
+Plug 'pedrohdz/vim-yaml-folds'
+Plug 'stephpy/vim-yaml'
+Plug 'Yggdroot/indentLine'
+
+
