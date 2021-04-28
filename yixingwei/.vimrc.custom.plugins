@@ -46,7 +46,4 @@ Plug 'posva/vim-vue'
 Plug 'scrooloose/syntastic'
 
 Plug 'pedrohdz/vim-yaml-folds'
-Plug 'stephpy/vim-yaml'
 Plug 'Yggdroot/indentLine'
-
-

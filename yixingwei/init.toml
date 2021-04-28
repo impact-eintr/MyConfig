@@ -1,0 +1,149 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2020 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    #colorscheme = "default-plus"
+    colorscheme = "default-reduce"
+    colorscheme_bg = "dark"
+# 文件树
+    # 文件树插件可选值包括：
+    # - vimfiler （默认）
+    # - nerdtree
+    # - defx
+    filemanager = "nerdtree"
+    filetree_direction = "left"
+# 缩进
+    default_indent = 4
+    expand_tab = true
+
+# Disable guicolors in basic mode, many terminal do not support 24bit true colors
+    enable_guicolors = false
+# Disable statusline separator, if you want to use other value, please
+# install nerd fonts
+    statusline_separator = "nil"
+    statusline_iseparator = "bar"
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon = false
+    enable_statusline_mode = false
+    statusline_unicode_symbols = false
+# Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+    # 开启相对目录
+    # 0：禁用autochdir
+    # 1：自动更改为项目根目录
+    # 2：自动切换到当前文件目录
+    project_rooter_automatically = 0
+
+# 代码自动补全
+#    autocomplete_method = "coc"
+#    autocomplete_method = "ycm"
+     autocomplete_method = "coc"
+
+# Enable autocomplete layer
+
+###
+# 模块选项
+# 为了提升用户体验，可以通过使用如下的模块选项来定制自动补全：
+# 1 auto_completion_return_key_behavior 选项控制当按下 Return/Enter 键时的行为， 默认为 complete，可用的值包括如下 3 种：
+# complete 补全模式，插入当前选中的列表选项
+# smart 智能模式，插入当前选中的列表选项，若当前选择的时 snippet，则自动展开代码块。
+# nil 当设为 nil 时，则采用 Vim 默认的按键行为，插入新行
+
+# 2 auto_completion_tab_key_behavior 选项控制当按下 Tab 键时的行为，默认为 complete，可用的值包括如下 4 种：
+# smart 智能模式，自动循环补全列表、展开代码块以及跳至下一个代码块的锚点
+# complete 补全模式，插入当前选中的列表选项
+# cycle 循环模式，自动再补全列表之间循环
+# nil 当设为 nil 时，该行为和 Tab 的默认行为一致
+
+# 3 auto_completion_delay 设置自动补全延迟时间，默认 50 毫秒
+
+# 4 auto_completion_complete_with_key_sequence 设置一个手动补全的由两个字符构成的按键序列， 如果你按下这个序列足够快，将会启动补全；如果这一选项的值是 nil ，这一特性将被禁用。 NOTE: 该选项不可以与全局选项 escape_key_binding 使用同一个值。
+
+# 5 auto_completion_complete_with_key_sequence_delay 设置手动补全按键序列延迟时间，默认是 1 秒。
+# 
+###
+[[layers]]
+    name = 'autocomplete'
+    auto_completion_return_key_behavior = "smart"
+    auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+# 开启git支持
+[[layers]]
+name = 'git'
+
+# 开启版本控制
+[[layers]]
+name = 'VersionControl'
+
+[[layers]]
+name = "colorscheme"
+
+# 语言支持
+####################################
+# html支持
+[[layers]]
+name = "lang#html"
+
+
+# md支持
+[[layers]]
+name = "lang#markdown"
+
+# golang支持
+[[layers]]
+name = "lang#go"
+
+# c/cpp支持
+[[layers]]
+name = "lang#c"
+enable_clang_syntax_highlight = true
+
+[layer.clang_std]
+cpp = "c11"
+
+# python支持
+[[layers]]
+name = "lang#python"
+####################################
+
+# LSP
+####################################
+[[layers]]
+name = "lsp"
+filetypes = [
+    "html",
+    "css",
+    "javascript",
+    "vue",
+    "c",
+    "cpp",
+    "go",
+    "rust",
+    "python"
+]
+
+[layers.override_cmd]
+    c = ['ccls', '--log-file=/tmp/ccls.log']
+    cpp = ['ccls', '--log-file=/tmp/ccls.log']
+    rust = ["rustup", "run", "nightly", "rls"]
+
+####################################
+
+[[layers]]
+name = "format"
+

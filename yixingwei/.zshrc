@@ -206,21 +206,24 @@ HYPHEN_INSENSITIVE="true"
 plugins=(git sudo)
 source $ZSH/oh-my-zsh.sh
 alias sl='ls'
-alias edit='notepadqq'
+
 alias volup='amixer -D pulse set Master 5%+'
 alias voldown='amixer -D pulse set Master 5%-'
-alias grep='grep --color=auto'
+
 #alias lssh='proxychains4 ssh -o ServerAliveInterval=60'
 alias lssh='ssh -o ServerAliveInterval=60'
-alias rssh='lssh -fNTCR localhost:2333:localhost:22 121.196.144.74'
+alias rssh='lssh -fNTCR localhost:2333:localhost:22 eintr@192.168.23.169'
 alias termux='lssh -p 8022 u0_a231@192.168.31.169'
-alias chtop='lssh htoper@175.24.24.112'
-alias iserver='lssh root@81.68.137.167 -p 6222'
+
+alias h3c1='lssh -p 20122 h3c@220.194.140.188'
+alias h3c2='lssh -p 20222 h3c@220.194.140.188'
+alias vh3c1='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20122 root@220.194.140.188:/root ~/Share/H3C1 -p 22 -C'
+alias vh3c2='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20222 root@220.194.140.188:/root ~/Share/H3C2 -p 22 -C'
+
 alias centos='lssh yixingwei@175.24.24.112'
 alias tyut='lssh root@192.168.23.169'
 alias ubuntu='lssh yixingwei@121.196.144.74'
 alias subuntu='lssh yixingwei@116.62.132.195'
-alias vcentos='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@175.24.24.112:$HOME ~/Share/Centos -p 22 -C'
 alias viserver='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 root@81.68.137.167:/ ~/Share/Iserver -p 6222 -C'
 alias varch='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.18:/home/eintr ~/Share/Arch -p 22 -C'
 alias vubuntu='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@121.196.144.74:$HOME ~/Share/Ubuntu -p 22 -C'
@@ -229,8 +232,6 @@ alias reboot='sudo reboot'
 alias gbkunzip='unzip -O cp936'
 alias cvim='vim scp://yixingwei@175.24.24.112//home/yixingwei/'
 alias cmongo='mongo 175.24.24.112:27017/admin -uyixingwei -p'
-alias cmysql='mysql -h 175.24.24.112 -uroot -p'
-alias hmysql='mysql -h 175.24.24.112 -uhive -p'
 alias watchnvidia='watch -n 1 nvidia-smi'
 alias mongodb='mongod --dbpath ~/Share/mongodb/data'
 alias xmind='cd /home/yixingwei/Share/XMind/XMind_amd64 ;nohup XMind 2> /dev/null&;cd -'
@@ -257,26 +258,17 @@ tim()
     sleep 3;
     /opt/apps/com.qq.tim.spark/files/run.sh
 }
+
 dict()
 {
     wd $1 |bat
 }
-export GOPATH=$HOME/Projects/GOPATH  #默认安装包的路径
-export GOBIN=$HOME/Projects/GOPATH/bin
-export PATH=$PATH::/home/yixingwei/Share/mongodb/bin:/home/yixingwei/Share/XMind/XMind_amd64:$GOPATH/bin:/opt/anaconda/bin:/opt/foxitsoftware/foxitreader:/opt/qv2ray:/home/yixingwei/.local/bin:/var/lib/snapd/snap/bin:/opt/Ngork:/home/yixingwei/Share/openrefine-3.4.1
 
-export HADOOP_HOME=/usr/lib/hadoop
-export HADOOP_INSTALL=$HADOOP_HOME
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
-export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
+export GOPATH=/data/_GOPATH  #默认安装包的路径
+export GOBIN=/data/_GOPATH/bin
+
+export PATH=$PATH::/home/yixingwei/Share/mongodb/bin:/home/yixingwei/Share/XMind/XMind_amd64:$GOPATH/bin:/opt/anaconda/bin:/opt/foxitsoftware/foxitreader:/opt/qv2ray:/home/yixingwei/.local/bin:/var/lib/snapd/snap/bin:/home/yixingwei/Share/openrefine-3.4.1:~/.npm-global/bin:
 
 export RABBITMQ_SERVER=amqp://test:test@192.168.4.1:5672
-export PATH=~/.npm-global/bin:$PATH
 
+export MANPATH=$HOME/Share/Man/:$MANPATH
