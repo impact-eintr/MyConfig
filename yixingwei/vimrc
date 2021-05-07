@@ -71,9 +71,11 @@ set autoread
 
 " golang
 noremap gb :GoDoc<cr>
-noremap gdb :GoDocBrowser 
+noremap gdb :GoDocBrowser<cr>
 noremap gi :GoImport 
 noremap gc :GoErrCheck<cr>
+noremap gd :GoDef<cr>
+
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'

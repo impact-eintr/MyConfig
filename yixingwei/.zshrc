@@ -200,7 +200,8 @@ esac
 
 
 export ZSH="/home/yixingwei/.oh-my-zsh"
-ZSH_THEME="random"
+#ZSH_THEME="random"
+ZSH_THEME="apple"
 CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="true"
 plugins=(git sudo)
@@ -220,20 +221,21 @@ alias h3c2='lssh -p 20222 h3c@220.194.140.188'
 alias vh3c1='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20122 root@220.194.140.188:/root ~/Share/H3C1 -p 22 -C'
 alias vh3c2='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20222 root@220.194.140.188:/root ~/Share/H3C2 -p 22 -C'
 
-alias centos='lssh yixingwei@175.24.24.112'
+alias titan='lssh titanscp@192.168.1.108'
 alias tyut='lssh root@192.168.23.169'
 alias ubuntu='lssh yixingwei@121.196.144.74'
 alias subuntu='lssh yixingwei@116.62.132.195'
-alias viserver='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 root@81.68.137.167:/ ~/Share/Iserver -p 6222 -C'
+
 alias varch='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.18:/home/eintr ~/Share/Arch -p 22 -C'
 alias vubuntu='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@121.196.144.74:$HOME ~/Share/Ubuntu -p 22 -C'
 alias vtyut='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 root@192.168.23.169:/home ~/Share/Tyut -p 22 -C'
+
 alias reboot='sudo reboot'
 alias gbkunzip='unzip -O cp936'
 alias cvim='vim scp://yixingwei@175.24.24.112//home/yixingwei/'
-alias cmongo='mongo 175.24.24.112:27017/admin -uyixingwei -p'
 alias watchnvidia='watch -n 1 nvidia-smi'
 alias mongodb='mongod --dbpath ~/Share/mongodb/data'
+
 alias xmind='cd /home/yixingwei/Share/XMind/XMind_amd64 ;nohup XMind 2> /dev/null&;cd -'
 alias tf2='source activate tf2-gpu'
 #out : source deactivate
