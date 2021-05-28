@@ -72,7 +72,7 @@ setopt prompt_subst
 PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
 # Print a greeting message when shell is started
 echo $USER@$HOST  $(uname -srm) #$(lsb_release -rcs)
-neofetch
+neofetch|lolcat
 ## Prompt on right side:
 #  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
 #  - shows exit status of previous command (if previous command finished with an error)
@@ -200,42 +200,54 @@ esac
 
 
 export ZSH="/home/eintr/.oh-my-zsh"
-ZSH_THEME="random"
+#ZSH_THEME="random"
+ZSH_THEME="apple"
 CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="true"
 plugins=(git sudo)
 source $ZSH/oh-my-zsh.sh
+alias ls='exa'
 alias sl='ls'
-alias grep='grep --color=auto'
-alias lssh='ssh -o ServerAliveInterval=60'
-alias rssh='lssh -fNTCR localhost:5000:localhost:22 yixingwei@175.24.24.112'
-alias termux='lssh -p 8022 u0_a231@192.168.31.169'
-alias sshr='autossh -M 55555  -NfR 0.0.0.0:23333:localhost:22 yixingwei@175.24.24.112'
-alias chtop='lssh htoper@175.24.24.112'
-alias centos='lssh yixingwei@175.24.24.112'
-alias vcentos='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 yixingwei@175.24.24.112:$HOME ~/Share/Centos -p 22 -C'
-alias varchfast='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.6:/home/eintr ~/Share/arch -p 22 -C'
-alias varchnormal='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.31.235:/home/eintr ~/Share/arch -p 22 -C'
-alias vtermux='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 u0_a231@192.168.31.169:/data/data/com.termux/files/home ~/Share/Termux -p 8022 -C'
-alias vkali='sshfs -p 4022 yixingwei@localhost:$HOME ~/Share/Kali;lssh -p 4022 yixingwei@127.0.0.1'
-alias vfedora='sshfs -p 5022 yixingwei@localhost:$HOME ~/Share/Fedora;lssh  -p 5022 yixingwei@127.0.0.1'
-alias vubuntu='sshfs -p 6022 yixingwei@localhost:$HOME ~/Share/Fedora;lssh  -p 6022 yixingwei@127.0.0.1'
 
-alias cvim='vim scp://yixingwei@175.24.24.112//home/yixingwei/'
-alias cmongo='mongo 175.24.24.112:27017/admin -uyixingwei -p'
-alias cmysql='mysql -h 175.24.24.112 -uroot -p'
+alias ems='emacsclient -nw'
+
+alias volup='amixer -D pulse set Master 5%+'
+alias voldown='amixer -D pulse set Master 5%-'
+
+#alias lssh='proxychains4 ssh -o ServerAliveInterval=60'
+alias lssh='ssh -o ServerAliveInterval=60'
+alias rssh='lssh -fNTCR localhost:2333:localhost:22 eintr@192.168.23.169'
+alias termux='lssh -p 8022 u0_a231@192.168.31.169'
+
+alias h3c1='lssh -p 20122 h3c@220.194.140.188'
+alias h3c2='lssh -p 20222 h3c@220.194.140.188'
+alias vh3c1='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20122 root@220.194.140.188:/root ~/Share/H3C1 -p 22 -C'
+alias vh3c2='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20222 root@220.194.140.188:/root ~/Share/H3C2 -p 22 -C'
+
+alias titan='lssh titanscp@192.168.1.108'
+alias tyut='lssh root@192.168.23.169'
+alias ubuntu='lssh eintr@121.196.144.74'
+alias subuntu='lssh eintr@116.62.132.195'
+
+alias vbsd='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 root@127.0.0.1:/root ~/Share/FreeBSD -p 2222 -C'
+alias vubuntu='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@121.196.144.74:$HOME ~/Share/Ubuntu -p 22 -C'
+alias vtyut='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 root@192.168.23.169:/home ~/Share/Tyut -p 22 -C'
+
+alias reboot='sudo reboot'
+alias gbkunzip='unzip -O cp936'
+alias cvim='vim scp://eintr@175.24.24.112//home/eintr/'
 alias watchnvidia='watch -n 1 nvidia-smi'
 alias mongodb='mongod --dbpath ~/Share/mongodb/data'
-alias xmind='cd /home/yixingwei/Share/XMind/XMind_amd64 ;nohup XMind>log&;cd -'
-alias matlab='/run/media/yixingwei/新加卷/MATLAB/R2017a/bin/matlab'
-#alias tf2='source activate tf2-gpu'
-alias penv='python3 -m venv --system-site-packages /home/eintr/Projects/BigData/venv && source /home/eintr/Projects/BigData/venv/bin/activate'
+
+alias xmind='cd /home/eintr/Share/XMind/XMind_amd64 ;nohup XMind 2> /dev/null&;cd -'
+alias tf2='source activate tf2-gpu'
 #out : source deactivate
-alias mat='matlab -nodesktop -nosplash'
 alias rmt='Trash'
 alias vi='vim'
 alias ntfs='sudo ntfsfix /dev/sdc'
-alias typora='Typora'
+filehash(){
+    cat $1 | openssl dgst -sha256 | base64
+}
 #alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
     --cache=$HOME/.npm/.cache/cnpm \
@@ -247,30 +259,16 @@ Trash()
     mv $@ ~/.local/share/Trash/files/
 }
 
-tim()
-{
-    /usr/lib/gsd-xsettings &;
-    sleep 3;
-    /opt/deepinwine/apps/Deepin-TIM/run.sh
-}
 dict()
 {
     wd $1 |bat
 }
-export GOPATH=$HOME/Projects/GOPATH  #默认安装包的路径
-export GOBIN=$HOME/Projects/GOPATH/bin
-export PATH=$PATH::/home/eintr/Share/XMind/XMind_amd64:$GOPATH/bin:/home/eintr/Share/openrefine-3.4.1:/home/eintr/.local/bin:/home/eintr/Share/typora/
 
-export HADOOP_HOME=/usr/lib/hadoop
-export HADOOP_INSTALL=$HADOOP_HOME
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
-export JAVA_HOME=/usr/lib64/jvm/jre-1.8.0-openjdk/
-export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
+export GOPATH=/data/_GOPATH  #默认安装包的路径
+export GOBIN=/data/_GOPATH/bin
 
+export PATH=$PATH::/home/eintr/Share/mongodb/bin:/home/eintr/Share/XMind/XMind_amd64:$GOPATH/bin:/opt/anaconda/bin:/opt/foxitsoftware/foxitreader:/opt/qv2ray:/home/eintr/.local/bin:/var/lib/snapd/snap/bin:/home/eintr/Share/openrefine-3.4.1:~/.npm-global/bin:~/.emacs.d/bin
 
+export RABBITMQ_SERVER=amqp://test:test@192.168.4.1:5672
+
+export MANPATH=$HOME/Share/Man/:$MANPATH

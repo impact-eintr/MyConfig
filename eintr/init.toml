@@ -22,7 +22,7 @@
     filemanager = "nerdtree"
     filetree_direction = "left"
 # 缩进
-    default_indent = 4
+    default_indent = 2
     expand_tab = true
 
 # Disable guicolors in basic mode, many terminal do not support 24bit true colors
@@ -119,6 +119,12 @@ cpp = "c11"
 # python支持
 [[layers]]
 name = "lang#python"
+
+# java支持
+[[layers]]
+name = "lang#java"
+# java_formatter_jar = "/home/eintr/.SpaceVim.d/lib/google-java-format/google-java-format-1.10.0.jar"
+java_formatter_jar = "/usr/bin/google-java-format"
 ####################################
 
 # LSP
@@ -135,15 +141,34 @@ filetypes = [
     "go",
     "rust",
     "python"
+    "java"
 ]
 
 [layers.override_cmd]
     c = ['ccls', '--log-file=/tmp/ccls.log']
     cpp = ['ccls', '--log-file=/tmp/ccls.log']
     rust = ["rustup", "run", "nightly", "rls"]
+    java = [
+    "java",
+    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+    "-Dosgi.bundles.defaultStartLevel=4",
+    "-Declipse.product=org.eclipse.jdt.ls.core.product",
+    "-Dlog.protocol=true",
+    "-Dlog.level=NONE",
+    "-noverify",
+    "-Xmx1G",
+    "-jar",
+    "/home/eintr/.SpaceVim.d/lib/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar",
+    "-configuration",
+    "/home/eintr/.SpaceVim.d/lib/jdt-language-server/config_linux",
+    "-data",
+    "/home/eintr/.cache/jdt"
+    ]
 
 ####################################
 
 [[layers]]
 name = "format"
 
+[[layers]]
+name = "ctrlp"

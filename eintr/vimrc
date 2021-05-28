@@ -32,7 +32,7 @@ map s <nop>
 map D :%d<cr>
 noremap B :bn<cr>
 
-noremap zz za<cr>
+noremap ff za<cr>
 
 noremap ra :resize +10<cr>
 noremap rs :resize -10<cr>
@@ -271,4 +271,5 @@ let g:ycm_filetype_whitelist = {
                         \ "ps1":1,
                         \ }
 
-
+"" 快速进入复制模式
+set pastetoggle=<F9>
