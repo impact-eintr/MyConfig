@@ -196,12 +196,8 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
         ;;
 esac
 
-
-
-
 export ZSH="/home/eintr/.oh-my-zsh"
-#ZSH_THEME="random"
-ZSH_THEME="apple"
+#ZSH_THEME="apple"
 CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="true"
 plugins=(git sudo)
@@ -209,7 +205,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls='exa'
 alias sl='ls'
 
-alias ems='emacsclient -nw'
+alias ems='emacsclient -c -nw'
 
 alias volup='amixer -D pulse set Master 5%+'
 alias voldown='amixer -D pulse set Master 5%-'
@@ -266,9 +262,14 @@ dict()
 
 export GOPATH=/data/_GOPATH  #默认安装包的路径
 export GOBIN=/data/_GOPATH/bin
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 export PATH=$PATH::/home/eintr/Share/mongodb/bin:/home/eintr/Share/XMind/XMind_amd64:$GOPATH/bin:/opt/anaconda/bin:/opt/foxitsoftware/foxitreader:/opt/qv2ray:/home/eintr/.local/bin:/var/lib/snapd/snap/bin:/home/eintr/Share/openrefine-3.4.1:~/.npm-global/bin:~/.emacs.d/bin
 
 export RABBITMQ_SERVER=amqp://test:test@192.168.4.1:5672
 
 export MANPATH=$HOME/Share/Man/:$MANPATH
+
+
+# 启用starship
+eval "$(starship init zsh)"

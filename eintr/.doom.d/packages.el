@@ -50,5 +50,3 @@
 ;(unpin! t)
 (package! company-tabnine)
 (package! company-english-helper :recipe (:host github :repo "manateelazycat/company-english-helper"))
-(package! insert-translated-name :recipe (:host github :repo "manateelazycat/insert-translated-name"))
-;;(package! emacs-powerthesaurus :recipe (:host github :repo "SavchenkoValeriy/emacs-powerthesaurus"))
