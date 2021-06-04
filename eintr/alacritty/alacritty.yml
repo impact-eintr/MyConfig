@@ -1,5 +1,5 @@
 # 背景不透明度
-background_opacity: 0.7
+background_opacity: 0.66
 
 # 实时重载配置文件，不用重启测试配置选项
 live_config_reload: true
@@ -8,32 +8,32 @@ live_config_reload: true
 font:  
   # 常规字体
   normal:
-    family:  DroidSansMono Nerd Font
+    family:  Fira Code Nerd Font
     # 字体风格
     style: Regular
   
   book:
-    family:  DroidSansMono Nerd Font
+    family:  Fira Code Nerd Font
     # 字体风格
     style: Book
   
   # 粗体
   bold:
-    family: DroidSansMono Nerd Font
+    family:  Fira Code Nerd Font
     style: Bold
   
   # 斜体
   italic:
-    family: DroidSansMono Nerd Font
+    family:  Fira Code Nerd Font
     style: Italic
   
   # 斜粗体
   bold_italic:
-   family: DroidSansMono Nerd Font
-   style: Bold Italic
+    family:  Fira Code Nerd Font
+    style: Bold Italic
   
   # 字体大小
-  size: 13
+  size: 10
 
 #colors:
 #  # Default colors
