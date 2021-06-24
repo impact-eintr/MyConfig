@@ -132,10 +132,6 @@ java_formatter_jar = "/usr/bin/google-java-format"
 [[layers]]
 name = "lsp"
 filetypes = [
-    "html",
-    "css",
-    "javascript",
-    "vue",
     "c",
     "cpp",
     "go",
