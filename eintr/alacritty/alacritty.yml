@@ -1,5 +1,5 @@
 # 背景不透明度
-background_opacity: 0.66
+background_opacity: 0.9
 
 # 实时重载配置文件，不用重启测试配置选项
 live_config_reload: true
@@ -8,32 +8,32 @@ live_config_reload: true
 font:  
   # 常规字体
   normal:
-    family:  Fira Code Nerd Font
+    family:  SF Mono
     # 字体风格
     style: Regular
   
   book:
-    family:  Fira Code Nerd Font
+    family:  SF Mono
     # 字体风格
     style: Book
   
   # 粗体
   bold:
-    family:  Fira Code Nerd Font
+    family:  SF Mono
     style: Bold
   
   # 斜体
   italic:
-    family:  Fira Code Nerd Font
+    family:  SF Mono
     style: Italic
   
   # 斜粗体
   bold_italic:
-    family:  Fira Code Nerd Font
+    family:  SF Mono
     style: Bold Italic
   
   # 字体大小
-  size: 10
+  size: 13
 
 #colors:
 #  # Default colors

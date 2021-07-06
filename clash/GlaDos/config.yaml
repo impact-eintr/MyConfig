@@ -1,0 +1,1471 @@
+# GLaDOS New Clash Config File for ClashX 1.20.4
+# Sun May 23 2021 10:09:53 GMT+0000 (UTC)
+
+# port of HTTP
+port: 7890
+
+# port of SOCKS5
+socks-port: 7891
+
+allow-lan: true
+
+# Rule / Global/ DIRECT (default is Rule)
+mode: Rule
+
+# set log level to stdout (default is info)
+# info / warning / error / debug
+log-level: info
+
+# A RESTful API for clash
+external-controller: 127.0.0.1:9090
+
+# Secret for RESTful API (Optional)
+secret: ""
+
+
+dns:
+  enable: false # set true to enable dns (default is false)
+  listen: 127.0.0.1:53
+  nameserver:
+     - 119.29.29.29
+     - 114.114.114.114
+  fallback: # concurrent request with nameserver, fallback used when GEOIP country isn't CN
+     - tls://1.0.0.1:853
+     - tls://dns.google:853
+
+
+proxies:
+  - name: GLaDOS-Railgun-00
+    type: vmess
+    server: 10f71ee.ra.gladns.com
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Railgun-01
+    type: vmess
+    server: 10f71ee.rb.gladns.com
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Railgun-02
+    type: vmess
+    server: 10f71ee.rc.gladns.com
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Railgun-03
+    type: vmess
+    server: 10f71ee.rd.gladns.com
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Railgun-04
+    type: vmess
+    server: 10f71ee.re.gladns.com
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Railgun-05
+    type: vmess
+    server: 10f71ee.rf.gladns.com
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"rx.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-US-Netflix
+    type: vmess
+    server: 10f71ee.t1.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"trump.moss.network", "Edge": "10f71ee.fm.apple.com:24734" }
+    headers: {"Host":"trump.moss.network", "Edge": "10f71ee.fm.apple.com:24734" }
+    tls: false
+  - name: GLaDOS-TW-Netflix
+    type: vmess
+    server: 10f71ee.t2.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"test.moss.network", "Edge": "10f71ee.fm.apple.com:24734" }
+    headers: {"Host":"test.moss.network", "Edge": "10f71ee.fm.apple.com:24734" }
+    tls: false
+  - name: GLaDOS-HK-Netflix
+    type: vmess
+    server: 10f71ee.t3.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"hk.moss.network", "Edge": "10f71ee.fm.apple.com:24734" }
+    headers: {"Host":"hk.moss.network", "Edge": "10f71ee.fm.apple.com:24734" }
+    tls: false
+  - name: GLaDOS-N2-00
+    type: trojan
+    server: 10f71ee.pa.gladns.com
+    port: 3389
+    sni: n2.gladns.com
+    password: "fdf9fda0625fc306"
+    udp: true
+  - name: GLaDOS-N2-01
+    type: trojan
+    server: 10f71ee.pb.gladns.com
+    port: 3389
+    sni: n2.gladns.com
+    password: "fdf9fda0625fc306"
+    udp: true
+  - name: GLaDOS-N2-02
+    type: trojan
+    server: 10f71ee.pc.gladns.com
+    port: 3389
+    sni: n2.gladns.com
+    password: "fdf9fda0625fc306"
+    udp: true
+  - name: GLaDOS-N2-03
+    type: trojan
+    server: 10f71ee.pd.gladns.com
+    port: 3389
+    sni: n2.gladns.com
+    password: "fdf9fda0625fc306"
+    udp: true
+  - name: GLaDOS-N2-04
+    type: trojan
+    server: 10f71ee.pe.gladns.com
+    port: 3389
+    sni: n2.gladns.com
+    password: "fdf9fda0625fc306"
+    udp: true
+  - name: GLaDOS-N2-05
+    type: trojan
+    server: 10f71ee.pf.gladns.com
+    port: 3389
+    sni: n2.gladns.com
+    password: "fdf9fda0625fc306"
+    udp: true
+  - name: GLaDOS-Portalgun-00
+    type: vmess
+    server: 10f71ee.ha.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Portalgun-01
+    type: vmess
+    server: 10f71ee.hb.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Portalgun-02
+    type: vmess
+    server: 10f71ee.hc.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Portalgun-03
+    type: vmess
+    server: 10f71ee.hd.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Portalgun-04
+    type: vmess
+    server: 10f71ee.he.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-Portalgun-05
+    type: vmess
+    server: 10f71ee.hf.gladns.com
+    port: 3306
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"pan.baidu.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E01-Economic
+    type: vmess
+    server: 10f71ee.ts.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E02-Economic
+    type: vmess
+    server: 10f71ee.td.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E03-Economic
+    type: vmess
+    server: 10f71ee.tt.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E04-Economic
+    type: vmess
+    server: 10f71ee.th.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E05-Economic
+    type: vmess
+    server: 10f71ee.nx.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E06-Economic
+    type: vmess
+    server: 10f71ee.cw.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E07-Economic
+    type: vmess
+    server: 10f71ee.os.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E08-Economic
+    type: vmess
+    server: 10f71ee.ps.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E09-Economic
+    type: vmess
+    server: 10f71ee.ds.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E10-Economic
+    type: vmess
+    server: 10f71ee.ma.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E11-Economic
+    type: vmess
+    server: 10f71ee.mb.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E12-Economic
+    type: vmess
+    server: 10f71ee.mc.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E13-Economic
+    type: vmess
+    server: 10f71ee.md.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E14-Economic
+    type: vmess
+    server: 10f71ee.me.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E15-Economic
+    type: vmess
+    server: 10f71ee.mf.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"intrepid.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E16-Economic
+    type: vmess
+    server: 10f71ee.mg.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"enterprise.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E17-Economic
+    type: vmess
+    server: 10f71ee.mh.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"edge.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: GLaDOS-E18-Economic
+    type: vmess
+    server: 10f71ee.mi.cloudflare.systems
+    port: 80
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"sg.moss.network", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: US-GLaDOS-GEO-00
+    type: vmess
+    server: 10f71ee.ga.gladns.com
+    port: 3201
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: US-GLaDOS-GEO-01
+    type: vmess
+    server: 10f71ee.gb.gladns.com
+    port: 3201
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: US-GLaDOS-GEO-02
+    type: vmess
+    server: 10f71ee.gd.gladns.com
+    port: 3201
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: JP-GLaDOS-GEO-00
+    type: vmess
+    server: 10f71ee.ga.gladns.com
+    port: 3202
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: JP-GLaDOS-GEO-01
+    type: vmess
+    server: 10f71ee.gb.gladns.com
+    port: 3202
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: JP-GLaDOS-GEO-02
+    type: vmess
+    server: 10f71ee.gd.gladns.com
+    port: 3202
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: TW-GLaDOS-GEO-00
+    type: vmess
+    server: 10f71ee.ga.gladns.com
+    port: 3203
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: TW-GLaDOS-GEO-01
+    type: vmess
+    server: 10f71ee.gb.gladns.com
+    port: 3203
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: TW-GLaDOS-GEO-02
+    type: vmess
+    server: 10f71ee.gd.gladns.com
+    port: 3203
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: HK-GLaDOS-GEO-00
+    type: vmess
+    server: 10f71ee.ga.gladns.com
+    port: 3204
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: HK-GLaDOS-GEO-01
+    type: vmess
+    server: 10f71ee.gb.gladns.com
+    port: 3204
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: HK-GLaDOS-GEO-02
+    type: vmess
+    server: 10f71ee.gd.gladns.com
+    port: 3204
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: SG-GLaDOS-GEO-00
+    type: vmess
+    server: 10f71ee.ga.gladns.com
+    port: 3205
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: SG-GLaDOS-GEO-01
+    type: vmess
+    server: 10f71ee.gb.gladns.com
+    port: 3205
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+  - name: SG-GLaDOS-GEO-02
+    type: vmess
+    server: 10f71ee.gd.gladns.com
+    port: 3205
+    uuid: "57e0cb4d-eae5-48ec-8091-149dc2b309e0"
+    alterId: 32
+    cipher: none
+    udp: true
+    network: ws
+    ws-path: "/t"
+    ws-headers: { "Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    headers: {"Host":"api.apple.com", "Edge": "10f71ee.fm.huawei.com:24734" }
+    tls: false
+
+proxy-groups:
+  - name: Auto-Fast
+    type: "url-test"
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 300
+    tolerance: 30
+    proxies:
+        - GLaDOS-Railgun-00
+        - GLaDOS-Railgun-01
+        - GLaDOS-Railgun-02
+        - GLaDOS-Portalgun-00
+        - GLaDOS-Portalgun-01
+        - GLaDOS-Portalgun-02
+        - GLaDOS-N2-00
+        - GLaDOS-N2-01
+        - GLaDOS-N2-02
+        - GLaDOS-N2-03
+        - GLaDOS-N2-04
+        - GLaDOS-N2-05
+  - name: Auto-Edge
+    type: "url-test"
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 300
+    tolerance: 30
+    proxies:
+        - GLaDOS-Railgun-03
+        - GLaDOS-Railgun-04
+        - GLaDOS-Railgun-05
+        - GLaDOS-Portalgun-03
+        - GLaDOS-Portalgun-04
+        - GLaDOS-Portalgun-05
+        - GLaDOS-N2-00
+        - GLaDOS-N2-01
+        - GLaDOS-N2-02
+        - GLaDOS-N2-03
+        - GLaDOS-N2-04
+        - GLaDOS-N2-05
+  - name: Economic
+    type: "url-test"
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 3600
+    tolerance: 30
+    proxies:
+        - GLaDOS-E01-Economic
+        - GLaDOS-E02-Economic
+        - GLaDOS-E03-Economic
+        - GLaDOS-E04-Economic
+        - GLaDOS-E05-Economic
+        - GLaDOS-E06-Economic
+        - GLaDOS-E07-Economic
+        - GLaDOS-E08-Economic
+        - GLaDOS-E09-Economic
+        - GLaDOS-E10-Economic
+        - GLaDOS-E11-Economic
+        - GLaDOS-E12-Economic
+        - GLaDOS-E13-Economic
+        - GLaDOS-E14-Economic
+        - GLaDOS-E15-Economic
+        - GLaDOS-E16-Economic
+        - GLaDOS-E17-Economic
+        - GLaDOS-E18-Economic
+  - name: Express
+    type: "fallback"
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 900
+    tolerance: 30
+    proxies:
+        - Auto-Edge
+        - Auto-Fast
+        - Economic
+  - name: Auto
+    type: "fallback"
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 900
+    proxies:
+        - Auto-Fast
+        - Auto-Edge
+        - Economic
+        - DIRECT
+  - name: Geo
+    type: "url-test"
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 900
+    proxies:
+        - US-GLaDOS-GEO-00
+        - US-GLaDOS-GEO-01
+        - US-GLaDOS-GEO-02
+        - JP-GLaDOS-GEO-00
+        - JP-GLaDOS-GEO-01
+        - JP-GLaDOS-GEO-02
+        - TW-GLaDOS-GEO-00
+        - TW-GLaDOS-GEO-01
+        - TW-GLaDOS-GEO-02
+        - HK-GLaDOS-GEO-00
+        - HK-GLaDOS-GEO-01
+        - HK-GLaDOS-GEO-02
+        - SG-GLaDOS-GEO-00
+        - SG-GLaDOS-GEO-01
+        - SG-GLaDOS-GEO-02
+        - "GLaDOS-TW-Netflix"
+        - "GLaDOS-US-Netflix"
+        - "GLaDOS-HK-Netflix"
+  - name: Proxy
+    type: "select"
+    proxies:
+        - "Auto"
+        - GLaDOS-Railgun-00
+        - GLaDOS-Railgun-01
+        - GLaDOS-Railgun-02
+        - GLaDOS-Portalgun-00
+        - GLaDOS-Portalgun-01
+        - GLaDOS-Portalgun-02
+        - GLaDOS-N2-00
+        - GLaDOS-N2-01
+        - GLaDOS-N2-02
+        - GLaDOS-N2-03
+        - GLaDOS-N2-04
+        - GLaDOS-N2-05
+        - GLaDOS-Railgun-03
+        - GLaDOS-Railgun-04
+        - GLaDOS-Railgun-05
+        - GLaDOS-Portalgun-03
+        - GLaDOS-Portalgun-04
+        - GLaDOS-Portalgun-05
+        - GLaDOS-N2-00
+        - GLaDOS-N2-01
+        - GLaDOS-N2-02
+        - GLaDOS-N2-03
+        - GLaDOS-N2-04
+        - GLaDOS-N2-05
+        - Economic
+        - US-GLaDOS-GEO-00
+        - US-GLaDOS-GEO-01
+        - US-GLaDOS-GEO-02
+        - JP-GLaDOS-GEO-00
+        - JP-GLaDOS-GEO-01
+        - JP-GLaDOS-GEO-02
+        - TW-GLaDOS-GEO-00
+        - TW-GLaDOS-GEO-01
+        - TW-GLaDOS-GEO-02
+        - HK-GLaDOS-GEO-00
+        - HK-GLaDOS-GEO-01
+        - HK-GLaDOS-GEO-02
+        - SG-GLaDOS-GEO-00
+        - SG-GLaDOS-GEO-01
+        - SG-GLaDOS-GEO-02
+  - name: Video
+    type: "select"
+    interval: 600
+    url: "http://www.gstatic.cn/generate_204"
+    proxies:
+        - "Express"
+        - "Economic"
+        - GLaDOS-Railgun-00
+        - GLaDOS-Railgun-01
+        - GLaDOS-Railgun-02
+        - GLaDOS-Portalgun-00
+        - GLaDOS-Portalgun-01
+        - GLaDOS-Portalgun-02
+        - GLaDOS-N2-00
+        - GLaDOS-N2-01
+        - GLaDOS-N2-02
+        - GLaDOS-N2-03
+        - GLaDOS-N2-04
+        - GLaDOS-N2-05
+        - GLaDOS-Railgun-03
+        - GLaDOS-Railgun-04
+        - GLaDOS-Railgun-05
+        - GLaDOS-Portalgun-03
+        - GLaDOS-Portalgun-04
+        - GLaDOS-Portalgun-05
+        - GLaDOS-N2-00
+        - GLaDOS-N2-01
+        - GLaDOS-N2-02
+        - GLaDOS-N2-03
+        - GLaDOS-N2-04
+        - GLaDOS-N2-05
+  - name: NETFLIX
+    type: "select"
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 3000
+    proxies:
+        - "GLaDOS-TW-Netflix"
+        - "GLaDOS-US-Netflix"
+        - "GLaDOS-HK-Netflix"
+
+rules:
+# check first
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,baidu.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,360.cn,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,com.cn,DIRECT
+
+# hot fix
+- DOMAIN,services.googleapis.cn,Proxy
+- DOMAIN,googleapis.cn,Proxy
+- DOMAIN-SUFFIX,ping.pe,Proxy
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Proxy
+
+# > Bilibili
+- DOMAIN-KEYWORD,bilibili,DIRECT
+- DOMAIN-SUFFIX,acg.tv,DIRECT
+- DOMAIN-SUFFIX,acgvideo.com,DIRECT
+- DOMAIN-SUFFIX,b23.tv,DIRECT
+- DOMAIN-SUFFIX,biliapi.com,DIRECT
+- DOMAIN-SUFFIX,biliapi.net,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,biligame.com,DIRECT
+- DOMAIN-SUFFIX,biligame.net,DIRECT
+- DOMAIN-SUFFIX,hdslb.com,DIRECT
+- DOMAIN-SUFFIX,im9.com,DIRECT
+
+# > Blizzard
+- DOMAIN-SUFFIX,blizzard.com,DIRECT
+- DOMAIN-SUFFIX,battle.net,DIRECT
+- DOMAIN,blzddist1-a.akamaihd.net,DIRECT
+
+# common site
+- DOMAIN,ifconfig.me,Proxy
+- DOMAIN,services.googleapis.cn,Proxy
+- DOMAIN,google.com,Proxy
+- DOMAIN-SUFFIX,google.cn,Proxy
+- DOMAIN-SUFFIX,googleapis.cn,Proxy
+- DOMAIN-KEYWORD,facebook,Proxy
+- DOMAIN-SUFFIX,fb.me,Proxy
+- DOMAIN-KEYWORD,gmail,Proxy
+- DOMAIN-KEYWORD,twitter,Proxy
+- DOMAIN-KEYWORD,instagram,Proxy
+- DOMAIN-SUFFIX,twimg.com,Proxy
+- DOMAIN-KEYWORD,blogspot,Proxy
+- DOMAIN-KEYWORD,whatsapp,Proxy
+- DOMAIN-KEYWORD,scholar,Proxy
+- DOMAIN-KEYWORD,glados,Proxy
+- DOMAIN-KEYWORD,wikipedia,Proxy
+- DOMAIN-SUFFIX,google.com,Proxy
+- DOMAIN-SUFFIX,facebook.com,Proxy
+- DOMAIN-SUFFIX,yahoo.com,Proxy
+- DOMAIN-SUFFIX,amazon.com,Proxy
+- DOMAIN-SUFFIX,vk.com,Proxy
+- DOMAIN-SUFFIX,reddit.com,Proxy
+- DOMAIN-SUFFIX,live.com,Proxy
+- DOMAIN-SUFFIX,zoom.us,Proxy
+- DOMAIN-SUFFIX,wikipedia.org,Proxy
+- DOMAIN-SUFFIX,myshopify.com,Proxy
+- DOMAIN-SUFFIX,instagram.com,Proxy
+- DOMAIN-SUFFIX,okezone.com,Proxy
+- DOMAIN-SUFFIX,office.com,Proxy
+- DOMAIN-SUFFIX,ebay.com,Proxy
+- DOMAIN-SUFFIX,bongacams.com,Proxy
+- DOMAIN-SUFFIX,blogspot.com,Proxy
+- DOMAIN-SUFFIX,yahoo.co.jp,Proxy
+- DOMAIN-SUFFIX,babytree.com,Proxy
+- DOMAIN-SUFFIX,amazon.co.jp,Proxy
+- DOMAIN-SUFFIX,adobe.com,Proxy
+- DOMAIN-SUFFIX,livejasmin.com,Proxy
+- DOMAIN-SUFFIX,stackoverflow.com,Proxy
+- DOMAIN-SUFFIX,dropbox.com,Proxy
+- DOMAIN-SUFFIX,msn.com,Proxy
+- DOMAIN-SUFFIX,yandex.ru,Proxy
+- DOMAIN-SUFFIX,linkedin.com,Proxy
+- DOMAIN-SUFFIX,twitter.com,Proxy
+- DOMAIN-SUFFIX,imgur.com,Proxy
+- DOMAIN-SUFFIX,amazonaws.com,Proxy
+- DOMAIN-SUFFIX,imdb.com,Proxy
+- DOMAIN-SUFFIX,whatsapp.com,Proxy
+- DOMAIN-SUFFIX,google.co.jp,Proxy
+- DOMAIN-SUFFIX,trello.com,Proxy
+- DOMAIN-SUFFIX,wordpress.com,Proxy
+- DOMAIN-SUFFIX,nytimes.com,Proxy
+- DOMAIN-SUFFIX,spotify.com,Proxy
+
+# Video
+- DOMAIN,ip.sb,Video
+- DOMAIN-KEYWORD,youtube,Video
+- DOMAIN-SUFFIX,youtu.be,Video
+- DOMAIN-SUFFIX,googlevideo.com,Video
+- DOMAIN-SUFFIX,ytimg.com,Video
+- DOMAIN-SUFFIX,googleusercontent.com,Video
+- DOMAIN-KEYWORD,twitch,Video
+
+#NETFLIX
+- DOMAIN-SUFFIX,netflix.com,NETFLIX
+- DOMAIN-SUFFIX,netflix.net,NETFLIX
+- DOMAIN-SUFFIX,nflxext.com,NETFLIX
+- DOMAIN-SUFFIX,nflximg.com,NETFLIX
+- DOMAIN-SUFFIX,nflximg.net,NETFLIX
+- DOMAIN-SUFFIX,nflxso.net,NETFLIX
+#Fast.com
+- DOMAIN-SUFFIX,oca.nflxvideo.net,NETFLIX
+- DOMAIN-SUFFIX,nflxvideo.net,NETFLIX
+
+# > ABC
+- DOMAIN-SUFFIX,edgedatg.com,Video
+- DOMAIN-SUFFIX,go.com,Video
+
+# > AbemaTV
+- DOMAIN,linear-abematv.akamaized.net,Video
+- DOMAIN-SUFFIX,abema.io,Video
+- DOMAIN-SUFFIX,abema.tv,Video
+- DOMAIN-SUFFIX,akamaized.net,Video
+- DOMAIN-SUFFIX,ameba.jp,Video
+- DOMAIN-SUFFIX,hayabusa.io,Video
+
+# > Amazon Prime Video
+- DOMAIN-SUFFIX,aiv-cdn.net,Video
+- DOMAIN-SUFFIX,amazonaws.com,Video
+- DOMAIN-SUFFIX,amazonvideo.com,Video
+- DOMAIN-SUFFIX,llnwd.net,Video
+
+# > Bahamut
+- DOMAIN-SUFFIX,bahamut.com.tw,NETFLIX
+- DOMAIN-SUFFIX,gamer.com.tw,NETFLIX
+- DOMAIN-SUFFIX,hinet.net,NETFLIX
+
+# > BBC
+- DOMAIN-KEYWORD,bbcfmt,Video
+- DOMAIN-KEYWORD,co.uk,Video
+- DOMAIN-KEYWORD,uk-live,Video
+- DOMAIN-SUFFIX,bbc.co,Video
+- DOMAIN-SUFFIX,bbc.co.uk,Video
+- DOMAIN-SUFFIX,bbc.com,Video
+- DOMAIN-SUFFIX,bbci.co,Video
+- DOMAIN-SUFFIX,bbci.co.uk,Video
+
+# > CHOCO TV
+- DOMAIN-SUFFIX,chocotv.com.tw,Video
+
+# > Epicgames
+- DOMAIN-KEYWORD,epicgames,Video
+- DOMAIN-SUFFIX,helpshift.com,Video
+
+# > Fox+
+- DOMAIN-KEYWORD,foxplus,Video
+- DOMAIN-SUFFIX,config.fox.com,Video
+- DOMAIN-SUFFIX,emome.net,Video
+- DOMAIN-SUFFIX,fox.com,Video
+- DOMAIN-SUFFIX,foxdcg.com,Video
+- DOMAIN-SUFFIX,foxnow.com,Video
+- DOMAIN-SUFFIX,foxplus.com,Video
+- DOMAIN-SUFFIX,foxplay.com,Video
+- DOMAIN-SUFFIX,ipinfo.io,Video
+- DOMAIN-SUFFIX,mstage.io,Video
+- DOMAIN-SUFFIX,now.com,Video
+- DOMAIN-SUFFIX,theplatform.com,Video
+- DOMAIN-SUFFIX,urlload.net,Video
+
+# > HBO && HBO Go
+- DOMAIN-SUFFIX,amazonaws.com,Video
+- DOMAIN-SUFFIX,hbo.com,Video
+- DOMAIN-SUFFIX,hboasia.com,Video
+- DOMAIN-SUFFIX,hbogo.com,Video
+- DOMAIN-SUFFIX,hbogoasia.hk,Video
+
+# > Hulu
+- DOMAIN-SUFFIX,happyon.jp,Video
+- DOMAIN-SUFFIX,hulu.com,Video
+- DOMAIN-SUFFIX,huluim.com,Video
+- DOMAIN-SUFFIX,hulustream.com,Video
+
+# > Imkan
+- DOMAIN-SUFFIX,imkan.tv,Video
+
+# > JOOX
+- DOMAIN-SUFFIX,joox.com,Video
+
+# > MytvSUPER
+- DOMAIN-KEYWORD,nowtv100,Video
+- DOMAIN-KEYWORD,rthklive,Video
+- DOMAIN-SUFFIX,mytvsuper.com,Video
+- DOMAIN-SUFFIX,tvb.com,Video
+
+# > Pandora
+- DOMAIN-SUFFIX,pandora.com,Video
+
+# > Sky GO
+- DOMAIN-SUFFIX,sky.com,Video
+- DOMAIN-SUFFIX,skygo.co.nz,Video
+
+# > Spotify
+- DOMAIN-KEYWORD,spotify,Video
+- DOMAIN-SUFFIX,scdn.co,Video
+- DOMAIN-SUFFIX,spoti.fi,Video
+
+# > viuTV
+- DOMAIN-SUFFIX,viu.tv,Video
+
+# > Youtube
+- DOMAIN-KEYWORD,youtube,Video
+- DOMAIN-SUFFIX,googlevideo.com,Video
+- DOMAIN-SUFFIX,gvt2.com,Video
+- DOMAIN-SUFFIX,youtu.be,Video
+- DOMAIN-SUFFIX,youtu.be,Video
+- DOMAIN-SUFFIX,yt.be,Video
+- DOMAIN-SUFFIX,ytimg.com,Video
+- DOMAIN-KEYWORD,pornhub,Video
+- DOMAIN-KEYWORD,porn,Video
+- DOMAIN-KEYWORD,phncdn,Video
+- DOMAIN-SUFFIX,vimeo.com,Video
+- DOMAIN-SUFFIX,vimeocdn.com,Video
+
+# > IQIYI
+- DOMAIN-KEYWORD,qiyi,DIRECT
+- DOMAIN-SUFFIX,qy.net,DIRECT
+- DOMAIN-SUFFIX,letv.com,DIRECT
+
+# > NeteaseMusic
+- DOMAIN-SUFFIX,163yun.com,DIRECT
+- DOMAIN-SUFFIX,music.126.net,DIRECT
+- DOMAIN-SUFFIX,music.163.com,DIRECT
+
+#Tech
+- DOMAIN-SUFFIX,code.visualstudio.com,DIRECT
+- DOMAIN-SUFFIX,v2ex.com,Proxy
+- DOMAIN-KEYWORD,gitlab,Proxy
+- DOMAIN-KEYWORD,github,Proxy
+- DOMAIN-KEYWORD,stackoverflow.com,Proxy
+- DOMAIN-SUFFIX,pinboard.in,Proxy
+- DOMAIN-SUFFIX,techcrunch.com,Proxy
+- DOMAIN-SUFFIX,trello.com,Proxy
+- DOMAIN-SUFFIX,techsmith.com,Proxy
+- DOMAIN-SUFFIX,thepiratebay.org,Proxy
+- DOMAIN-SUFFIX,pinterest.com,Proxy
+- DOMAIN-SUFFIX,yacd.haishan.me,Proxy
+
+# DIRECT
+- DOMAIN-SUFFIX,digicert.com,DIRECT
+
+# > Google
+- DOMAIN,pagead2.googlesyndication.com,DIRECT
+- DOMAIN-SUFFIX,abc.xyz,Proxy
+- DOMAIN-SUFFIX,android.com,Proxy
+- DOMAIN-SUFFIX,androidify.com,Proxy
+- DOMAIN-SUFFIX,dialogflow.com,Proxy
+- DOMAIN-SUFFIX,autodraw.com,Proxy
+- DOMAIN-SUFFIX,capitalg.com,Proxy
+- DOMAIN-SUFFIX,certificate-transparency.org,Proxy
+- DOMAIN-SUFFIX,chrome.com,Proxy
+- DOMAIN-SUFFIX,chromeexperiments.com,Proxy
+- DOMAIN-SUFFIX,chromestatus.com,Proxy
+- DOMAIN-SUFFIX,chromium.org,Proxy
+- DOMAIN-SUFFIX,creativelab5.com,Proxy
+- DOMAIN-SUFFIX,debug.com,Proxy
+- DOMAIN-SUFFIX,deepmind.com,Proxy
+- DOMAIN-SUFFIX,firebaseio.com,Proxy
+- DOMAIN-SUFFIX,getmdl.io,Proxy
+- DOMAIN-SUFFIX,ggpht.com,Proxy
+- DOMAIN-SUFFIX,gmail.com,Proxy
+- DOMAIN-SUFFIX,gmodules.com,Proxy
+- DOMAIN-SUFFIX,godoc.org,Proxy
+- DOMAIN-SUFFIX,golang.org,Proxy
+- DOMAIN-SUFFIX,gstatic.com,Proxy
+- DOMAIN-SUFFIX,gv.com,Proxy
+- DOMAIN-SUFFIX,gwtproject.org,Proxy
+- DOMAIN-SUFFIX,itasoftware.com,Proxy
+- DOMAIN-SUFFIX,madewithcode.com,Proxy
+- DOMAIN-SUFFIX,material.io,Proxy
+- DOMAIN-SUFFIX,polymer-project.org,Proxy
+- DOMAIN-SUFFIX,admin.recaptcha.net,Proxy
+- DOMAIN-SUFFIX,recaptcha.net,Proxy
+- DOMAIN-SUFFIX,shattered.io,Proxy
+- DOMAIN-SUFFIX,synergyse.com,Proxy
+- DOMAIN-SUFFIX,tensorflow.org,Proxy
+- DOMAIN-SUFFIX,tiltbrush.com,Proxy
+- DOMAIN-SUFFIX,waveprotocol.org,Proxy
+- DOMAIN-SUFFIX,waymo.com,Proxy
+- DOMAIN-SUFFIX,webmproject.org,Proxy
+- DOMAIN-SUFFIX,webrtc.org,Proxy
+- DOMAIN-SUFFIX,whatbrowser.org,Proxy
+- DOMAIN-SUFFIX,widevine.com,Proxy
+- DOMAIN-SUFFIX,x.company,Proxy
+- DOMAIN-KEYWORD,google,Proxy
+- DOMAIN-SUFFIX,github.com,Proxy
+- DOMAIN-SUFFIX,github.io,Proxy
+
+# apple
+- DOMAIN,hls.itunes.apple.com,DIRECT
+- DOMAIN,itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+
+- DOMAIN-SUFFIX,126.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,36kr.com,DIRECT
+- DOMAIN-SUFFIX,acfun.tv,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-SUFFIX,akamaized.net,DIRECT
+- DOMAIN-KEYWORD,alicdn,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+- DOMAIN-SUFFIX,clouddn.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+- DOMAIN-SUFFIX,cootekservice.com,DIRECT
+- DOMAIN-SUFFIX,csdn.net,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,dgtle.com,DIRECT
+- DOMAIN-SUFFIX,dianping.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,easou.com,DIRECT
+- DOMAIN-SUFFIX,ele.me,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fir.im,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,g-cores.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN,cdn.hockeyapp.net,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hxcdn.net,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,ifengimg.com,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jianshu.com,DIRECT
+- DOMAIN-SUFFIX,knewone.com,DIRECT
+- DOMAIN-SUFFIX,le.com,DIRECT
+- DOMAIN-SUFFIX,lecloud.com,DIRECT
+- DOMAIN-SUFFIX,lemicp.com,DIRECT
+- DOMAIN-SUFFIX,licdn.com,DIRECT
+- DOMAIN-SUFFIX,linkedin.com,DIRECT
+- DOMAIN-SUFFIX,luoo.net,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,mi.com,DIRECT
+- DOMAIN-SUFFIX,miaopai.com,DIRECT
+
+# microsoft
+- DOMAIN-SUFFIX,live.com,DIRECT
+- DOMAIN-SUFFIX,live.net,DIRECT
+- DOMAIN-SUFFIX,office.com,DIRECT
+- DOMAIN-SUFFIX,office.net,DIRECT
+- DOMAIN-SUFFIX,sharepoint.com,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-SUFFIX,officeppe.net,DIRECT
+- DOMAIN-SUFFIX,skype.com,DIRECT
+- DOMAIN-SUFFIX,onedrive.com,DIRECT
+- DOMAIN-SUFFIX,msocsp.com,DIRECT
+- DOMAIN-SUFFIX,msauthimages.net,DIRECT
+- DOMAIN-SUFFIX,msauth.net,DIRECT
+- DOMAIN-SUFFIX,msn.com,DIRECT
+- DOMAIN-SUFFIX,onenote.com,DIRECT
+- DOMAIN-SUFFIX,onenote.net,DIRECT
+- DOMAIN-SUFFIX,1drv.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mob.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,office.com,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-KEYWORD,officecdn,DIRECT
+- DOMAIN-SUFFIX,oschina.net,DIRECT
+- DOMAIN-SUFFIX,ppsimg.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,qcloud.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qdmm.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qhres.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qihucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiniu.com,DIRECT
+- DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiyipic.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,qqurl.com,DIRECT
+- DOMAIN-SUFFIX,rarbg.to,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,segmentfault.com,DIRECT
+- DOMAIN-SUFFIX,sinaapp.com,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,speedtest.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,umetrip.com,DIRECT
+- DOMAIN-SUFFIX,upaiyun.com,DIRECT
+- DOMAIN-SUFFIX,upyun.com,DIRECT
+- DOMAIN-SUFFIX,v2ex.com,DIRECT
+- DOMAIN-SUFFIX,veryzhun.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,xycdn.com,DIRECT
+- DOMAIN-SUFFIX,yhd.com,DIRECT
+- DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+- DOMAIN-SUFFIX,yinxiang.com,DIRECT
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,youdao.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zealer.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+
+
+# Blocklist 黑名单
+- DOMAIN-SUFFIX,kuaizip.com,REJECT
+- DOMAIN-SUFFIX,mackeeper.com,REJECT
+- DOMAIN-SUFFIX,4009997658.com,REJECT
+- DOMAIN-SUFFIX,abbyychina.com,REJECT
+- DOMAIN-SUFFIX,bartender.cc,REJECT
+- DOMAIN-SUFFIX,betterzip.net,REJECT
+- DOMAIN-SUFFIX,beyondcompare.cc,REJECT
+- DOMAIN-SUFFIX,bingdianhuanyuan.cn,REJECT
+- DOMAIN-SUFFIX,chemdraw.com.cn,REJECT
+- DOMAIN-SUFFIX,cjmakeding.com,REJECT
+- DOMAIN-SUFFIX,cjmkt.com,REJECT
+- DOMAIN-SUFFIX,codesoftchina.com,REJECT
+- DOMAIN-SUFFIX,coreldrawchina.com,REJECT
+- DOMAIN-SUFFIX,crossoverchina.com,REJECT
+- DOMAIN-SUFFIX,easyrecoverychina.com,REJECT
+- DOMAIN-SUFFIX,ediuschina.com,REJECT
+- DOMAIN-SUFFIX,flstudiochina.com,REJECT
+- DOMAIN-SUFFIX,formysql.com,REJECT
+- DOMAIN-SUFFIX,guitarpro.cc,REJECT
+- DOMAIN-SUFFIX,huishenghuiying.com.cn,REJECT
+- DOMAIN-SUFFIX,hypersnap.net,REJECT
+- DOMAIN-SUFFIX,iconworkshop.cn,REJECT
+- DOMAIN-SUFFIX,imindmap.cc,REJECT
+- DOMAIN-SUFFIX,jihehuaban.com.cn,REJECT
+- DOMAIN-SUFFIX,keyshot.cc,REJECT
+- DOMAIN-SUFFIX,kingdeecn.cn,REJECT
+- DOMAIN-SUFFIX,logoshejishi.com,REJECT
+- DOMAIN-SUFFIX,mairuan.cn,REJECT
+- DOMAIN-SUFFIX,mairuan.com,REJECT
+- DOMAIN-SUFFIX,mairuan.com.cn,REJECT
+- DOMAIN-SUFFIX,mairuan.net,REJECT
+- DOMAIN-SUFFIX,mairuanwang.com,REJECT
+- DOMAIN-SUFFIX,makeding.com,REJECT
+- DOMAIN-SUFFIX,mathtype.cn,REJECT
+- DOMAIN-SUFFIX,mindmanager.cc,REJECT
+- DOMAIN-SUFFIX,mindmapper.cc,REJECT
+- DOMAIN-SUFFIX,mycleanmymac.com,REJECT
+- DOMAIN-SUFFIX,nicelabel.cc,REJECT
+- DOMAIN-SUFFIX,ntfsformac.cc,REJECT
+- DOMAIN-SUFFIX,ntfsformac.cn,REJECT
+- DOMAIN-SUFFIX,overturechina.com,REJECT
+- DOMAIN-SUFFIX,passwordrecovery.cn,REJECT
+- DOMAIN-SUFFIX,pdfexpert.cc,REJECT
+- DOMAIN-SUFFIX,shankejingling.com,REJECT
+- DOMAIN-SUFFIX,ultraiso.net,REJECT
+- DOMAIN-SUFFIX,vegaschina.cn,REJECT
+- DOMAIN-SUFFIX,xmindchina.net,REJECT
+- DOMAIN-SUFFIX,xshellcn.com,REJECT
+- DOMAIN-SUFFIX,yihuifu.cn,REJECT
+- DOMAIN-SUFFIX,yuanchengxiezuo.com,REJECT
+- DOMAIN-SUFFIX,zbrushcn.com,REJECT
+- DOMAIN-SUFFIX,zhzzx.com,REJECT
+- DOMAIN-SUFFIX,zunmi.cn,REJECT
+
+# allowed tracks
+- DOMAIN,graph.instagram.com,DIRECT
+- DOMAIN,www.googleadservices.com,DIRECT
+- DOMAIN,control.kochava.com,DIRECT
+- DOMAIN,www.google-analytics.com,DIRECT
+- DOMAIN,ssl.google-analytics.com,DIRECT
+- DOMAIN,nexus.officeapps.live.com,DIRECT
+- DOMAIN,googleads.g.doubleclick.net,DIRECT
+- DOMAIN,e.crashlytics.com,DIRECT
+- DOMAIN,ib.adnxs.com,DIRECT
+- DOMAIN,safebrowsing.googleapis.com,DIRECT
+- DOMAIN-SUFFIX,googlesyndication.com,DIRECT
+- DOMAIN-SUFFIX,googletagmanager.com,DIRECT
+- DOMAIN-SUFFIX,googletagservices.com,DIRECT
+
+# BT
+- DST-PORT,6881,DIRECT
+- DST-PORT,6882,DIRECT
+- DST-PORT,6883,DIRECT
+- DST-PORT,6884,DIRECT
+- DST-PORT,6885,DIRECT
+- DST-PORT,6886,DIRECT
+- DST-PORT,6887,DIRECT
+- DST-PORT,6888,DIRECT
+- DST-PORT,6889,DIRECT
+
+
+# RULE VERSION
+- DOMAIN,2020020202.version.clash.im,REJECT
+
+# =======最终规则====== #
+- GEOIP,CN,DIRECT
+
+# Cloudflare
+- IP-CIDR,173.245.48.0/20,Video
+- IP-CIDR,103.21.244.0/22,Video
+- IP-CIDR,103.22.200.0/22,Video
+- IP-CIDR,103.31.4.0/22,Video
+- IP-CIDR,141.101.64.0/18,Video
+- IP-CIDR,108.162.192.0/18,Video
+- IP-CIDR,190.93.240.0/20,Video
+- IP-CIDR,188.114.96.0/20,Video
+- IP-CIDR,197.234.240.0/22,Video
+- IP-CIDR,198.41.128.0/17,Video
+- IP-CIDR,162.158.0.0/15,Video
+- IP-CIDR,104.16.0.0/12,Video
+- IP-CIDR,172.64.0.0/13,Video
+- IP-CIDR,131.0.72.0/22,Video
+
+# Fastly
+- IP-CIDR,23.235.32.0/20,Video
+- IP-CIDR,43.249.72.0/22,Video
+- IP-CIDR,103.244.50.0/24,Video
+- IP-CIDR,167.82.160.0/20,Video
+- IP-CIDR,167.82.128.0/20,Video
+- IP-CIDR,167.82.0.0/17,Video
+- IP-CIDR,157.52.64.0/18,Video
+- IP-CIDR,167.82.224.0/20,Video
+- IP-CIDR,172.111.64.0/18,Video
+- IP-CIDR,185.31.16.0/22,Video
+- IP-CIDR,199.27.72.0/21,Video
+- IP-CIDR,151.101.0.0/16,Video
+- IP-CIDR,104.156.80.0/20,Video
+- IP-CIDR,103.245.224.0/24,Video
+- IP-CIDR,103.245.222.0/23,Video
+
+# LAN
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+
+- MATCH,Proxy
+
+# =======最终规则 END====== #
