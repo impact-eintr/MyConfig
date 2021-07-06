@@ -123,8 +123,8 @@ alias ems='emacsclient -c -nw'
 alias lssh='ssh -o ServerAliveInterval=60'
 alias rssh='lssh -fNTCR localhost:2333:localhost:22 eintr@192.168.23.169'
 
-alias h3c1='lssh -p 20122 h3c@220.194.140.188'
-alias h3c2='lssh -p 20222 h3c@220.194.140.188'
+alias h3c1='lssh -p 20122 h3c@59.49.106.69'
+alias h3c2='lssh -p 20222 h3c@59.49.106.69'
 alias vh3c1='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20122 root@220.194.140.188:/root ~/Share/H3C1 -p 22 -C'
 alias vh3c2='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 -p 20222 root@220.194.140.188:/root ~/Share/H3C2 -p 22 -C'
 
@@ -133,6 +133,7 @@ alias ubuntu='lssh eintr@121.196.144.74'
 alias subuntu='lssh eintr@116.62.132.195'
 
 alias vubuntu='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@121.196.144.74:$HOME ~/Share/Ubuntu -p 22 -C'
+alias vcode01='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 eintr@192.168.1.117:$HOME ~/Share/Code01 -p 22 -C'
 alias vtyut='sshfs -o allow_other -o reconnect -o ServerAliveInterval=15 root@192.168.23.169:/home ~/Share/Tyut -p 22 -C'
 
 alias reboot='sudo reboot'
@@ -165,8 +166,8 @@ dict()
     wd $1 |bat
 }
 
-export GOPATH=~/GOPATH  #默认安装包的路径
-export GOBIN=~/GOPATH/bin
+export GOPATH=/data/_GOPATH  #默认安装包的路径
+export GOBIN=$GOPATH/bin
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 export PATH=$PATH:$GOBIN:/home/eintr/.local/bin~/.npm-global/bin:~/.emacs.d/bin
